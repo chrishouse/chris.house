@@ -12,8 +12,9 @@
  */
 
 ?>
+
 <!doctype html>
-<html <?php language_attributes(); ?> >
+<html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,7 +22,18 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<div id="content" class="site-content">
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main">
+
+<header class="site-header inner">
+	<h1 class="site-title"><a href="<?php echo esc_url( site_url( '/' ) ); ?>">chris<span class="accent">.</span>house</a></h1>
+	<p class="tagline"><?php bloginfo( 'description' ); ?></p>
+	<nav class="site-navigation">
+		<a href="https://github.com/chrishouse" target="_blank" title="My GitHub"><i class="fa-brands fa-github"></i></a>
+		<a href="<?php echo esc_url( site_url( '/contact' ) ); ?>" title="Contact me"><i class="fa-solid fa-envelope"></i></a>
+	</nav>
+</header>
+
+<div class="divider"></div>
+
+<div id="page">
+
+	<div id="content" class="inner">

@@ -14,29 +14,17 @@
  * @since Chris House 1.0
  */
 
-get_header();?>
+get_header(); ?>
 
-<div>
-	<?php
-	while ( have_posts() ) {
-		the_post();
-		?>
-		<div>
-			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+<?php get_template_part( 'template-parts/content', 'filter' ); ?>
 
-			<div>
-				<p>Posted by <?php the_author_posts_link(); ?> on <?php the_time( 'F j, Y' ); ?> in <?php echo get_the_category_list( ', ' ); ?></p>
-			</div>
+<main class="main-block">
 
-			<div>
-				<?php the_excerpt(); ?>
-				<p><a href="<?php the_permalink(); ?>">Continue reading &raquo;</a></p>
-			</div>
-		</div>
-		<?php
-	}
-	?>
-</div>
+	<h1 class="main-title">My Work</h1>
+
+	<div class="portfolio-grid"></div>
+
+</main>
 
 <?php
 get_footer();

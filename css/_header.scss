@@ -1,0 +1,55 @@
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 25px 25px 10px 25px;
+}
+
+.tagline {
+  margin: 0 15px 15px 0;
+}
+
+.site-title {
+  border-right: solid 1px $main-color;
+  animation: title-cursor 1s steps(2) infinite;
+  margin: 0 15px 15px 0;
+  a {
+    color: $text-color;
+    text-decoration: none;
+  }
+  &:hover {
+    a {
+      color: $main-color;
+    }
+    .accent {
+      color: $text-color;
+    }
+    border-right: solid 1px $text-color;
+  }
+}
+
+@keyframes title-cursor {
+  0% {
+    border-color: transparent;
+  }
+}
+
+.site-navigation {
+  margin: 0 0 15px 0;
+  display: flex;
+  > a {
+    display: block;
+    margin: 0 10px;
+    font-size: 28px;
+    &:hover {
+      color: $text-color;
+    }
+  }
+}
+
+.divider {
+  height: 0;
+  border-top: solid 1px #222;
+  border-bottom: solid 1px #444;
+}
